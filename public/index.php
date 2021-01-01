@@ -54,7 +54,7 @@ $router->map(
 
 $router->map(
     'GET',
-    '/cours',
+    '/cours/[a:lessons]?',
     [
         'controller' => 'MainController',
         'method' => 'cours'
@@ -62,15 +62,17 @@ $router->map(
     'cours'
 );
 
+
 $router->map(
     'GET',
-    '/cours/[a:lessons]',
+    '/cours/[a:lessons]/[a:classe]',
     [
         'controller' => 'MainController',
         'method' => 'lessons'
     ],
     'lessons'
 );
+
 
 $router->map(
     'GET',
@@ -89,11 +91,11 @@ if ($match !== false) {
     $name = $match['target']['controller'];
     $method = $match['target']['method'];
 
-    $lessons = $match['params'];
+    $infos = $match['params'];
 
     $params = [
         'baseURI' => $_SERVER['BASE_URI'],
-        'lessons' => $lessons 
+        'infos' => $infos 
     ];
 
 

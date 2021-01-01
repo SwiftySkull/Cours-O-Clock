@@ -13,10 +13,10 @@ class Saison
     private $subtitle;
     private $picture;
 
-    public function find($id)
+    public function find($number)
     {
         $pdo = Database::getPDO();
-        $sql = "SELECT * FROM `Saison` WHERE id={$id};";
+        $sql = "SELECT * FROM `Saison` WHERE `number` = '{$number}';";
         $statement = $pdo->query($sql);
         $saison = $statement->fetchObject(static::class);
         return $saison;

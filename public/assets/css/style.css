@@ -195,12 +195,59 @@ Partie Main
 .home {
   text-align: center;
   padding: 1rem;
+  font-size: 1.5rem;
 }
 
-.home p {
+.home .intro p {
   margin: 1rem auto;
   font-weight: bold;
-  font-size: 2rem;
+}
+
+.home .choices {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.home .choice_link {
+  border: black solid 1px;
+  width: 90%;
+  margin: 1rem auto 0px;
+  border-radius: 30px;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 450px) {
+  .home {
+    font-size: 2.5rem;
+  }
+
+  .home .choice_link {
+    height: 5rem;
+    margin: 2rem auto 0px;
+  }
+}
+
+@media (min-width: 800px) {
+
+  .home .choice_link {
+    height: 8rem;
+    font-size: 3rem;
+    margin: 3rem auto 0px;
+  }
+
+}
+
+@media (min-width: 1025px) {
+  .home .choice_link {
+    width: 45%;
+    margin: 0 auto;
+    height: 12.5rem;
+    font-size: 5rem;
+  }
 }
 
 /* TODO CLICKER */
@@ -260,7 +307,7 @@ Partie Main
 
 /* TODO COURS */
 
-.cours {
+.cours .full_lessons {
   display: flex;
   margin: 5px;
   flex-wrap: wrap;
@@ -271,6 +318,10 @@ Partie Main
   display: flex;
   justify-content: center;
   margin: 0.5rem auto;
+}
+
+.cours .contain_bis {
+  width: 100%;
 }
 
 .cours .lesson {
@@ -286,6 +337,7 @@ Partie Main
 .cours .image {
   width: 100%;
   height: 100%;
+  border-radius: 30px;
 }
 
 .cours .vignette {
@@ -298,15 +350,29 @@ Partie Main
   font-size: 2rem;
 }
 
+/* A MODIFIER SI NECESSAIRE
+.cours .contain_lesson h2 {
+  font-size: 2rem;
+}
+*/
+
 @media (min-width: 450px) {
-  .cours {
+  .cours .full_lessons {
     justify-content: space-around;
+  }
+
+  .cours .image {
+    border-radius: 50px;
   }
 
   .cours .container {
     width: 50%;
     display: flex;
     flex-wrap: wrap;
+  }
+
+  .cours .contain_bis {
+    width: 100%;
   }
 
   .cours .lesson {
@@ -321,6 +387,14 @@ Partie Main
   .cours h3 {
     font-size: 2rem;
   }
+
+  .cours .contain_lesson h2 {
+    font-size: 3rem;
+  }
+
+  .cours .contain_lesson h3 {
+    font-size: 1.5rem;
+  }
 }
 
 @media (min-width: 675px) {
@@ -328,12 +402,25 @@ Partie Main
     height: 250px;
     width: 230px;
   }
+
+  .cours .image {
+    border-radius: 60px;
+  }
+
 }
 
 @media (min-width: 800px) {
   .cours .container {
     width: 33%;
     margin: 0.5rem 0.1rem;
+  }
+
+  .cours .contain_bis {
+    width: 100%;
+  }
+
+  .cours .image {
+    border-radius: 70px;
   }
 
   .cours .lesson {
@@ -348,11 +435,27 @@ Partie Main
   .cours h3 {
     font-size: 3rem;
   }
+
+  .cours .contain_lesson h2 {
+    font-size: 4rem;
+  }
+
+  .cours .contain_lesson h3 {
+    font-size: 2.5rem;
+  }
 }
 
 @media (min-width: 1025px) {
   .cours .container {
     width: 49%;
+  }
+
+  .cours .contain_bis {
+    width: 100%;
+  }
+
+  .cours .image {
+    border-radius: 100px;
   }
 
   .cours .lesson {
@@ -367,12 +470,120 @@ Partie Main
   .cours h3 {
     font-size: 4rem;
   }
+
+  .cours .contain_lesson h2 {
+    font-size: 5rem;
+  }
+
+  .cours .contain_lesson h3 {
+    font-size: 3rem;
+  }
 }
 
 @media (min-width: 1500px) {
   .cours .container {
     width: 33%;
   }
+
+  .cours .contain_bis {
+    width: 100%;
+  }
+}
+
+/* TODO LESSONS */
+
+.lessons .buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+#contenu_cours {
+  margin: 2rem;
+}
+
+.lessons .container {
+  display: flex;
+  width: 50%;
+  justify-content: center;
+  margin: 5px auto;
+}
+
+.lessons .full_lessons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.lessons .lesson {
+  text-align: center;
+  height: 130px;
+  width: 120px;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lessons .image {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.lessons .vignette {
+  position: absolute;
+  color: #fff;
+  text-shadow: black 1px 1px;
+}
+
+.lessons h2 {
+  font-size: 1.5rem;
+}
+
+.lessons h3 {
+  font-size: 0.8rem;
+}
+
+@media (max-width: 200px) {
+  .lessons .container {
+    width: 100%;
+  }
+}
+
+@media (min-width: 450px) {
+  .lessons .container {
+    width: 25%;
+    margin: 0.5rem auto;
+  }
+}
+
+@media (min-width: 800px) {
+  .lessons .full_lessons {
+    flex-wrap: wrap;
+  }
+
+  .lessons .lesson {
+    height: 180px;
+    width: 160px;
+  }
+
+  .lessons .image {
+    border-radius: 30px;
+  }
+
+  .lessons h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .lessons .container {
+    width: auto;
+  }
+}
+
+.lessons .hide {
+  display: none;
 }
 
 /*

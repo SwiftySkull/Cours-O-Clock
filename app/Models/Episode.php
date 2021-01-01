@@ -14,19 +14,19 @@ class Episode
     private $content;
     private $id_saison;
 
-    public function find($id)
+    public function find($number, $saison)
     {
         $pdo = Database::getPDO();
-        $sql = "SELECT * FROM `Episode` WHERE id={$id};";
+        $sql = "SELECT `Episode`.* FROM `Episode` INNER JOIN `Saison` ON `Episode`.`id_saison` = `Saison`.`id` WHERE `Episode`.`number` = '{$number}' AND `Saison`.`number` = '{$saison}';";
         $statement = $pdo->query($sql);
         $episode = $statement->fetchObject(static::class);
         return $episode;
     }
 
-    public function findAllInSeason($id)
+    public function findAllInSeason($number)
     {
         $pdo = Database::getPDO();
-        $sql = "SELECT * FROM `Episode` WHERE `id_saison` = {$id};";
+        $sql = "SELECT `Episode`.* FROM `Episode` INNER JOIN `Saison` ON `Episode`.`id_saison` = `Saison`.`id` WHERE `Saison`.`number` = '{$number}';";
         $statement = $pdo->query($sql);
         $episodes = $statement->fetchAll(PDO::FETCH_CLASS, static::class);
         return $episodes;

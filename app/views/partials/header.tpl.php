@@ -14,12 +14,11 @@
     <header>
         <img class="logo" src="<?= $viewVars['baseURI'] ?>/assets/images/Poulpy.jpg" alt="Logo">
         <nav class="top-menu">
-            <div class="open-menu">
+            <div id="menu_status" class="open-menu">
                 --------<br>
                 --------<br>
                 --------<br>
             </div>
-            <div class="menu close-menu hide"> X </div>
             <div id="home" class="hide">
             	<a class="xl-link" href="<?=$viewVars['baseURI']?>/home"><p class="menu men Ho">Home</p></a>
             </div>
