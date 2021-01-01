@@ -5,6 +5,7 @@
     <a href="https://www.facebook.com/Swift741">
         <img class="liens_ext" src="<?= $viewVars['baseURI'] ?>/assets/images/facebook.webp" alt="Lien Facebook">
     </a>
+    <a href="test"><button>TEST</button></a>
 </footer>
 
 <!--<script src="<?= $viewVars['baseURI'] ?>/assets/js/jquery.min.js"></script>

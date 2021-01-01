@@ -1,38 +1,58 @@
+/* ! BODY */
+body {
+  font-family: 'Redressed', cursive;
+}
+
+@media (min-width: 450px) {
+  body {
+    background-color: rgb(255, 212, 212);
+  }
+}
+
+@media (min-width: 800px) {
+  body {
+    background-color: rgb(190, 255, 170);
+  }
+}
+
+@media (min-width: 1025px) {
+  body {
+    background-color: rgb(175, 210, 255);
+  }
+}
+
 /* ! HEADER */
 
 /*
 Partie Header
 */
-body {
-  font-family: 'Redressed', cursive;
-}
 
 header {
   text-align: center;
   background-color: rgb(238, 238, 238);
 }
 
-.logo {
+header .logo {
   height: 100px;
   width: 80px;
   margin: 1rem auto 0;
 }
 
-.top-menu {
+header .top-menu {
   width: 90vw;
   max-width: 90vw;
   text-align: center;
   margin: auto;
 }
 
-.open-menu {
+header .open-menu {
   margin: 1rem auto;
   height: auto;
   height: 50px;
   border: 1px black solid;
 }
 
-.appear {
+header .appear {
   height: auto;
   height: 50px;
   border: 1px black solid;
@@ -44,34 +64,30 @@ header {
   text-transform: uppercase;
 }
 
-.hide {
+header .hide {
   display: none;
 }
 
 /* ? Media au dessus d'un téléphone, pour tablette et mode paysage */
 
 @media (min-width: 450px) {
-  body {
-    background-color: rgb(255, 212, 212);
-  }
-
   header {
     text-align: left;
     display: flex;
     background-color: rgb(255, 179, 179);
   }
 
-  .logo {
+  header .logo {
     height: 160px;
     width: 140px;
     margin: 0;
   }
 
-  .top-menu {
+  header .top-menu {
     width: 60%;
   }
 
-  .appear {
+  header .appear {
     height: calc(150px / 4);
     font-size: 2rem;
   }
@@ -80,34 +96,30 @@ header {
 /* ? Media au dessus d'une tablette et ses modes paysages, petits écrans */
 
 @media (min-width: 800px) {
-  body {
-    background-color: rgb(190, 255, 170);
-  }
-
   header {
     background-color: rgb(140, 255, 120);
   }
 
-  .open-menu {
+  header .open-menu {
     width: 100%;
   }
 
-  .logo {
+  header .logo {
     height: 250px;
     width: 210px;
   }
 
-  .top-menu {
+  header .top-menu {
     display: flex;
   }
 
-  .appear {
+  header .appear {
     writing-mode: vertical-lr;
     text-orientation: upright;
     font-size: 1.5rem;
   }
 
-  .menu {
+  header .menu {
     height: 200px;
     width: 175px;
   }
@@ -116,36 +128,32 @@ header {
 /* ? Media écrans de PC */
 
 @media (min-width: 1025px) {
-  body {
-    background-color: rgb(175, 210, 255);
-  }
-
   header {
     background-color: rgb(148, 173, 255);
   }
 
-  .open-menu {
+  header .open-menu {
     display: none;
   }
 
-  .top-menu {
+  header .top-menu {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
 
-  .logo {
+  header .logo {
     height: 415px;
     width: 350px;
   }
 
-  .close-menu {
+  header .close-menu {
     display: none;
   }
 
-  #cours,
-  #home,
-  #clicker {
+  header #cours,
+  header #home,
+  header #clicker {
     border: 1px black solid;
     border-radius: 50px;
     width: 49%;
@@ -153,18 +161,18 @@ header {
     font-size: 6rem;
   }
 
-  .men {
+  header .men {
     display: inline;
     text-align: center;
   }
 
-  #cours {
+  header #cours {
     order: -1;
     width: 100%;
     margin-bottom: 5px;
   }
 
-  .xl-link {
+  header .xl-link {
     width: 100%;
     display: inline-block;
     padding-top: 45px;
@@ -202,13 +210,13 @@ Partie Main
   font-size: 2rem;
 }
 
-.game {
+.clicker .game {
   display: flex;
   justify-content: center;
   align-content: center;
 }
 
-#counter {
+.clicker #counter {
   border: solid black 3px;
   border-radius: 15px;
   height: 100px;
@@ -218,21 +226,21 @@ Partie Main
   align-items: center;
 }
 
-#count {
+.clicker #count {
   font-size: 5rem;
 }
 
-#trophy {
+.clicker #trophy {
   display: flex;
   flex-wrap: wrap;
 }
 
-#last_trophy {
+.clicker #last_trophy {
   display: flex;
   justify-content: center;
 }
 
-.trophy_bloc {
+.clicker .trophy_bloc {
   border: solid #f0f 3px;
   border-radius: 5px;
   height: 100px;
@@ -245,7 +253,7 @@ Partie Main
   margin: 2px;
 }
 
-.trophy_icon {
+.clicker .trophy_icon {
   width: 100%;
   font-size: 2rem;
 }
@@ -253,7 +261,118 @@ Partie Main
 /* TODO COURS */
 
 .cours {
+  display: flex;
+  margin: 5px;
+  flex-wrap: wrap;
+}
+
+.cours .container {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  margin: 0.5rem auto;
+}
+
+.cours .lesson {
   text-align: center;
+  height: 150px;
+  width: 120px;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cours .image {
+  width: 100%;
+  height: 100%;
+}
+
+.cours .vignette {
+  position: absolute;
+  color: #fff;
+  text-shadow: black 1px 1px;
+}
+
+.cours h2 {
+  font-size: 2rem;
+}
+
+@media (min-width: 450px) {
+  .cours {
+    justify-content: space-around;
+  }
+
+  .cours .container {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .cours .lesson {
+    height: 200px;
+    width: 180px;
+  }
+
+  .cours h2 {
+    font-size: 4rem;
+  }
+
+  .cours h3 {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 675px) {
+  .cours .lesson {
+    height: 250px;
+    width: 230px;
+  }
+}
+
+@media (min-width: 800px) {
+  .cours .container {
+    width: 33%;
+    margin: 0.5rem 0.1rem;
+  }
+
+  .cours .lesson {
+    height: 300px;
+    width: 270px;
+  }
+
+  .cours h2 {
+    font-size: 5rem;
+  }
+
+  .cours h3 {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .cours .container {
+    width: 49%;
+  }
+
+  .cours .lesson {
+    height: 415px;
+    width: 350px;
+  }
+
+  .cours h2 {
+    font-size: 6rem;
+  }
+
+  .cours h3 {
+    font-size: 4rem;
+  }
+}
+
+@media (min-width: 1500px) {
+  .cours .container {
+    width: 33%;
+  }
 }
 
 /*
@@ -267,10 +386,10 @@ Partie Footer
 */
 footer {
   text-align: center;
-  margin-top: 5rem;
+  margin-top: 1rem;
 }
 
-.liens_ext {
+footer .liens_ext {
   height: 2rem;
 }
 

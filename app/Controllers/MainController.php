@@ -2,6 +2,9 @@
 
 namespace OCours\Controllers;
 
+use OCours\Models\Episode;
+use OCours\Models\Saison;
+
 class MainController{
 
     public function home($params){
@@ -15,11 +18,43 @@ class MainController{
 
     public function cours($params){
         
+        $seasons = new Saison();
+        
+        $saisons = $seasons->findAll();
+
+        $viewVars = [
+            'baseURI' => $params['baseURI'],
+            'saisons' => $saisons
+        ];
+
+        $this->show('cours', $viewVars);
+
+    }
+
+    public function lessons($params){
+
+        $lesson = new Episode();
+        $idl = $params['lessons']['lessons'];
+
+        $episode = $lesson->find($idl);
+        dump($episode);
+        
+        $viewVars = [
+            'baseURI' => $params['baseURI'],
+            'episode' => $episode
+        ];
+
+        $this->show('lessons', $viewVars);
+
+    }
+
+    public function test($params){
+        
         $viewVars = [
             'baseURI' => $params['baseURI']
         ];
 
-        $this->show('cours', $viewVars);
+        $this->show('test', $viewVars);
 
     }
 

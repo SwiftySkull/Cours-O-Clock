@@ -18,7 +18,7 @@ const click = {
 
     handleClick: function () {
         let count = document.querySelector('#count');
-        
+
         if (double === 4){
             counter += double;
             real_click++;
@@ -83,21 +83,28 @@ const click = {
 
     handleDoubleClick: function () {
         let count = document.querySelector('#count');
+        let multiple_click = document.querySelector('#double_click');
 
         if (double === 1 && counter >= 100){
             counter -= 100;
             double++;
             count.textContent = counter;
+            multiple_click.textContent = 'Triple clic';
+
         
         } else if (double === 2 && counter >= 500) {
             counter -= 500;
             double++;
             count.textContent = counter;
+            multiple_click.textContent = 'Quadruple clic';
+
 
         } else if (double === 3 && counter >= 1000) {
             counter -= 1000;
             double++;
             count.textContent = counter;
+            multiple_click.className = 'hide';
+
 
         }
     }

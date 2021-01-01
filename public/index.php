@@ -33,6 +33,17 @@ $router->map(
 
 $router->map(
     'GET',
+    '/test',
+    [
+        'controller' => 'MainController',
+        'method' => 'test'
+    ],
+    'test'
+);
+
+
+$router->map(
+    'GET',
     '/home',
     [
         'controller' => 'MainController',
@@ -53,6 +64,16 @@ $router->map(
 
 $router->map(
     'GET',
+    '/cours/[a:lessons]',
+    [
+        'controller' => 'MainController',
+        'method' => 'lessons'
+    ],
+    'lessons'
+);
+
+$router->map(
+    'GET',
     '/clicker',
     [
         'controller' => 'MainController',
@@ -68,7 +89,12 @@ if ($match !== false) {
     $name = $match['target']['controller'];
     $method = $match['target']['method'];
 
-    $params = ['baseURI' => $_SERVER['BASE_URI']];
+    $lessons = $match['params'];
+
+    $params = [
+        'baseURI' => $_SERVER['BASE_URI'],
+        'lessons' => $lessons 
+    ];
 
 
     $controller = new MainController();
