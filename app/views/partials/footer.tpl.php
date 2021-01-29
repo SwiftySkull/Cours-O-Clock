@@ -5,12 +5,15 @@
     <a href="https://www.facebook.com/Swift741">
         <img class="liens_ext" src="<?= $viewVars['baseURI'] ?>/assets/images/facebook.webp" alt="Lien Facebook">
     </a>
-    <a href="test"><button>TEST</button></a>
+    <div class="anachan">
+    <p>Merci à AnachanLagamine pour ses dessins !</p>
+    <p>Son compte Insta !</p>
+    <a href="https://www.instagram.com/anachanlagamine/">
+        <img class="liens_ext" src="<?= $viewVars['baseURI'] ?>/assets/images/insta.png" alt="Lien Instagram">
+    </a>
+    </div>
 </footer>
 
-<!--<script src="<?= $viewVars['baseURI'] ?>/assets/js/jquery.min.js"></script>
-<script src="<?= $viewVars['baseURI'] ?>/assets/js/popper.min.js"></script>
-<script src="<?= $viewVars['baseURI'] ?>/assets/js/bootstrap.min.js"></script>-->
 <script src="<?= $viewVars['baseURI'] ?>/assets/js/app.js"></script>
 </body>
 

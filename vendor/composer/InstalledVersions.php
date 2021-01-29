@@ -43,6 +43,15 @@ private static $installed = array (
       ),
       'reference' => '127f6e96998708a31ef32252985bea82e3b03888',
     ),
+    'erusev/parsedown' => 
+    array (
+      'pretty_version' => '1.7.4',
+      'version' => '1.7.4.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'cb17b6477dfff935958ba01325f2e8a2bfa6dab3',
+    ),
     'etudiant/o_shop' => 
     array (
       'pretty_version' => '1.0.0+no-version-set',

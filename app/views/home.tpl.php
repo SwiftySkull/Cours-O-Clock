@@ -9,10 +9,13 @@
         Bien le bonjour dans le magnifique pays des OZ !
     </p>
     <p>
-        Ici bas tu pourras te ressourcer auprès des leçons vues jusqu'à aujourd'hui, une barre de recherche te sera même proposée !
+        Ici bas tu pourras te ressourcer auprès des leçons vues jusqu'à aujourd'hui !
     </p>
     <p>
         Et si tu préfères tu peux aller jouer à un petit jeu extrêmement chronophage avec plein de super trophées à débloquer ! 
+    </p>
+    <p>
+        Je ne promet rien mais j'espère pouvoir le mettre à jour avec de petites fonctionnalités nouvelles avec le temps en commencant par des règles plus claires sur mes jeux hein haha ! 
     </p>
     <p>
         Alors ? Que choisis-tu ?

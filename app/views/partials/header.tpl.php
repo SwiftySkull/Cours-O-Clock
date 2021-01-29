@@ -20,13 +20,19 @@
                 --------<br>
             </div>
             <div id="home" class="hide">
-            	<a class="xl-link" href="<?=$viewVars['baseURI']?>/home"><p class="menu men Ho">Home</p></a>
+                <a class="xl-link" href="<?=$viewVars['baseURI']?>/home">
+                <p class="menu men Ho">Home</p>
+            </a>
             </div>
             <div id="cours" class="hide">
-                <a class="xl-link" href="<?=$viewVars['baseURI']?>/cours"><p class="menu men Co">Cours</p></a>
+                <a class="xl-link" href="<?=$viewVars['baseURI']?>/cours">
+                <p class="menu men Co">Cours</p>
+            </a>
             </div>
             <div id="clicker" class="hide">
-                <a class="xl-link" href="<?=$viewVars['baseURI']?>/clicker"><p class="menu men Cl">Clicker</p></a>
+                <a class="xl-link" href="<?=$viewVars['baseURI']?>/clicker">
+                <p class="menu men Cl">Clicker</p>
+            </a>
             </div>
         </nav>
 

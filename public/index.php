@@ -1,23 +1,22 @@
 <?php
 
-/*
-
-S'occuper de remettre les lettres du header au centre en media 800
-
-
-
-
-
-
-
-
-
-*/
 require __DIR__ . '/../vendor/autoload.php';
 
 use OCours\Controllers\MainController;
 
 $router = new AltoRouter();
+
+if (array_key_exists('BASE_URI', $_SERVER)) {
+    // Alors on définit le basePath d'AltoRouter
+    $router->setBasePath($_SERVER['BASE_URI']);
+    // ainsi, nos routes correspondront à l'URL, après la suite de sous-répertoire
+}
+// sinon
+else {
+    // On donne une valeur par défaut à $_SERVER['BASE_URI'] car c'est utilisé dans le CoreController
+    $_SERVER['BASE_URI'] = '';
+}
+
 
 $router->setBasePath($_SERVER['BASE_URI']);
 

@@ -13,14 +13,8 @@
         <!-- Permet de revenir à la page regroupant tous les épisodes de la saison -->
 
         <section class="full_lessons">
-        <?php $url_saison = $router->generate(
-                'cours',
-                [
-                    'lessons' => $saison->getNumber(),
-                ]
-            ) ?>
             <div class="container">
-                <a href="<?= $url_saison?>">
+                <a href="<?= $router->generate('cours',['lessons' => $saison->getNumber(),])?>">
                     <section class="lesson">
                         <img src="<?= $viewVars['baseURI'] ?>/assets/images/Crash.png" alt="Crash" class="image">
                         <div class="vignette">
@@ -65,11 +59,8 @@
         <!-- Affiche la saison dans laquelle on est actuellement et revenir à la page de toutes les saisons -->
 
         <section class="full_lessons">
-        <?php $url = $router->generate(
-                'cours',
-            ) ?>
             <div class="container">
-                <a href="<?= $url?>">
+                <a href="<?= $router->generate('cours')?>">
                     <section class="lesson">
                         <img src="<?= $viewVars['baseURI'] ?>/assets/images/<?= $saison->getPicture()?>.png" alt="<?= $saison->getPicture()?>" class="image">
                         <div class="vignette">
@@ -93,15 +84,8 @@
     <!-- Affichage dynamique de tous les noms d'épisodes -->
     <section id="all_lessons" class="full_lessons hide">
         <?php foreach ($allEpisodes as $value) : ?>
-            <?php $url_class = $router->generate(
-                'lessons',
-                [
-                    'lessons' => $saison->getNumber(),
-                    'classe' => $value->getNumber()
-                ]
-            ) ?>
             <div class="container">
-                <a href="<?= $url_class ?>">
+                <a href="<?= $router->generate('lessons', ['lessons' => $saison->getNumber(), 'classe' => $value->getNumber()]) ?>">
                     <section class="lesson">
                         <img src="<?= $viewVars['baseURI'] ?>/assets/images/Crash.png" alt="Crash" class="image">
                         <div class="vignette">
@@ -119,8 +103,7 @@
         <?php endforeach ?>
     </section>
     <div id="contenu_cours">
-        <p>
-            <?= $episode->getContent() ?>
-        </p>
+        <?php $parsdown = new Parsedown();?>
+            <?= $parsdown->text($episode->getContent()) ?>
     </div>
 </main>

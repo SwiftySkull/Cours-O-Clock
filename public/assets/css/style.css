@@ -1,23 +1,24 @@
 /* ! BODY */
+
 body {
   font-family: 'Redressed', cursive;
 }
 
 @media (min-width: 450px) {
   body {
-    background-color: rgb(255, 212, 212);
+    background-color: rgb(253, 229, 229);
   }
 }
 
 @media (min-width: 800px) {
   body {
-    background-color: rgb(190, 255, 170);
+    background-color: rgb(217, 255, 205);
   }
 }
 
 @media (min-width: 1025px) {
   body {
-    background-color: rgb(175, 210, 255);
+    background-color: rgb(209, 229, 255);
   }
 }
 
@@ -498,7 +499,118 @@ Partie Main
 }
 
 #contenu_cours {
+  margin: 2rem 5rem auto;
+}
+
+.lessons #contenu_cours {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  text-align: justify;
+}
+
+.lessons #contenu_cours p {
+  margin: 0.5rem auto;
+}
+
+.lessons #contenu_cours h1 {
+  font-weight: bolder;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: red;
+}
+
+.lessons #contenu_cours h2 {
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
   margin: 2rem;
+  color: green;
+}
+
+.lessons #contenu_cours h3 {
+  font-weight: bold;
+  font-size: 2rem;
+  margin: 1rem;
+  color: orangered;
+}
+
+.lessons #contenu_cours strong {
+  font-weight: bold;
+}
+
+.lessons #contenu_cours em {
+  font-style: italic;
+  color: gray;
+}
+
+.lessons #contenu_cours strong em {
+  font-style: italic;
+  color: black;
+  text-decoration: underline;
+}
+
+.lessons #contenu_cours code {
+  color: rgb(53, 53, 53);
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.lessons #contenu_cours a {
+  text-decoration: underline;
+  color: blue;
+}
+
+.lessons #contenu_cours a:hover {
+  color: green;
+}
+
+.lessons #contenu_cours ul {
+  margin-bottom: 1rem;
+}
+
+.lessons #contenu_cours ul li {
+  margin-left: 2rem;
+  list-style-type: square;
+}
+
+.lessons #contenu_cours ul ul li {
+  list-style-type: circle;
+}
+
+.lessons #contenu_cours ul ul ul li {
+  list-style-type: disc;
+}
+
+.lessons #contenu_cours pre {
+  border: black 1px solid;
+  padding: 0.5rem;
+  padding-left: 2rem;
+  background-color: rgb(235, 235, 235);
+}
+
+.lessons #contenu_cours pre .language-html {
+  color: rgb(65, 65, 255);
+}
+
+.lessons #contenu_cours pre .language-php {
+  color: rgb(99, 202, 86);
+}
+
+.lessons #contenu_cours pre .language-js {
+  color: rgb(207, 205, 84);
+}
+
+.lessons #contenu_cours pre .language-sql {
+  color: rgb(202, 86, 86);
+}
+
+.lessons #contenu_cours pre .language-json {
+  color: rgb(156, 86, 202);
+}
+
+.lessons #contenu_cours ul ul ul ul li {
+  list-style-type: square;
 }
 
 .lessons .container {
