@@ -586,7 +586,7 @@ Partie Main
   border: black 1px solid;
   padding: 0.5rem;
   padding-left: 2rem;
-  background-color: rgb(235, 235, 235);
+  background-color: rgb(255, 244, 244);
 }
 
 .lessons #contenu_cours pre .language-html {
@@ -607,6 +607,14 @@ Partie Main
 
 .lessons #contenu_cours pre .language-json {
   color: rgb(156, 86, 202);
+}
+
+.lessons #contenu_cours pre .language-css {
+  color: rgb(86, 202, 192);
+}
+
+.lessons #contenu_cours pre .language-scss {
+  color: rgb(190, 119, 52);
 }
 
 .lessons #contenu_cours ul ul ul ul li {
